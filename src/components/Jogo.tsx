@@ -1,7 +1,7 @@
 import './Jogo.css'
 import { Comparador } from './Comparador'
 
-function Home() {
+function Jogo() {
 
   const texto = {
     txt1: 'Você é rico, mas tudo que você comer ter gosto de coco.',
@@ -29,4 +29,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Jogo

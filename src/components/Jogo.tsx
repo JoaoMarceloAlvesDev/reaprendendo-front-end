@@ -40,7 +40,7 @@ function Jogo() {
   const [v1, setV1] = useState(0)
   const [v2, setV2] = useState(1)
 
-  function cardClick(card: number) {
+  function cardClick() {
     if (!cardOneClick) return;
 
     setValor1(valoresReal[v1])
@@ -70,8 +70,8 @@ function Jogo() {
             <p style={{marginTop:0}}>{nome}</p>
           </div>
           <div className="cards-container">
-            <button className="card btn" id='card1' onClick={() => cardClick(1)}>{texto[txt1]}</button>
-            <button className="card btn" id='card2' onClick={() => cardClick(2)}>{texto[txt2]}</button>
+            <button className="card btn" id='card1' onClick={() => cardClick()}>{texto[txt1]}</button>
+            <button className="card btn" id='card2' onClick={() => cardClick()}>{texto[txt2]}</button>
           </div>
           <Comparador valor1={valor1} valor2={valor2} />
           <button className='btn' style={{ marginTop: "20px", width: "100%" }} onClick={proximo}>Próximo</button>

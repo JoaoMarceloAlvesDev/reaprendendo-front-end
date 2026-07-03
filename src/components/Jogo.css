@@ -33,3 +33,9 @@
     color: rgb(40, 126, 255);
     border: 2px solid rgb(40, 126, 255);
 }
+
+.container-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

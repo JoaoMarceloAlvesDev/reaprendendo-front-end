@@ -14,9 +14,6 @@ export function Comparador({ valor1, valor2 }: Props) {
     return (
         <div style={{position: "relative", width: "100%", display: "flex", flexDirection: "row", gap: 20, justifyContent: "center", alignItems: "center", marginTop: 20}}>
             <p style={{left: 10, position: "absolute", height: 40, color: "#ffffff",width: "200px", textAlign: "start", fontSize: "20px", marginTop: 35, }}>{valor1 > 0 && `${valor1Percent.toFixed(0)}% (${valor1})`}</p>
-            <div style={{ display: "flex", height: 40, borderRadius: 8, overflow: "hidden", background: "#eee", width: "100%", }}></div>
-
-
             <div style={{ display: "flex", height: 40, borderRadius: 8, overflow: "hidden", background: "#ddddddff", width: "100%" }}>
                 <div style={{ width: `${valor1Percent}%`, background: "rgb(40, 126, 255)", transition: "0.4s ease" }}></div>
                 <div style={{ width: `${valor2Percent}%`, background: "rgb(255, 70, 70)", transition: "0.4s ease" }}></div>

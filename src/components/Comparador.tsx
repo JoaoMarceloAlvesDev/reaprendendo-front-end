@@ -1,4 +1,4 @@
-StyleSheet
+// src/components/Comparador.tsx
 
 type Props = {
     valor1: number;
@@ -12,16 +12,32 @@ export function Comparador({ valor1, valor2 }: Props) {
     const valor2Percent = total ? (valor2 / total) * 100 : 0;
 
     return (
-        <div style={{ width: "100%", display: "flex", flexDirection: "row", gap: 20, justifyContent: "center", alignItems: "center", marginTop: 20}}>
-            <p style={{color: "rgb(40, 126, 255)",width: "200px", textAlign: "start", fontSize: "20px"}}>{valor1 > 0 && `${valor1Percent.toFixed(0)}% (${valor1})`}</p>
-            <div style={{ display: "flex", height: 36, borderRadius: 8, overflow: "hidden", background: "#eee", width: "100%", }}>
+<<<<<<< HEAD
+        <div style={{position: "relative", width: "100%", display: "flex", flexDirection: "column", gap: 8, marginTop: 20 }}>
+=======
+        <div style={{position: "relative", width: "100%", display: "flex", flexDirection: "row", gap: 20, justifyContent: "center", alignItems: "center", marginTop: 20}}>
+            <p style={{left: 10, position: "absolute", height: 40, color: "#ffffff",width: "200px", textAlign: "start", fontSize: "20px", marginTop: 35, }}>{valor1 > 0 && `${valor1Percent.toFixed(0)}% (${valor1})`}</p>
+            <div style={{ display: "flex", height: 40, borderRadius: 8, overflow: "hidden", background: "#eee", width: "100%", }}>
+>>>>>>> 053ee61558e86e7d5113bb062ead275e8eca0225
 
-                <div style={{ width: `${valor1Percent}%`, background: "rgb(40, 126, 255)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", transition: "0.3s", }}></div>
 
-                <div style={{ width: `${valor2Percent}%`, background: "rgb(255, 70, 70)", display: "flex", alignItems: "center", justifyContent: "center", color: "#000", transition: "0.3s", }}></div>
-
+            <div style={{ display: "flex", height: 40, borderRadius: 8, overflow: "hidden", background: "#ddddddff", width: "100%" }}>
+                <div style={{ width: `${valor1Percent}%`, background: "rgb(40, 126, 255)", transition: "0.4s ease" }}></div>
+                <div style={{ width: `${valor2Percent}%`, background: "rgb(255, 70, 70)", transition: "0.4s ease" }}></div>
             </div>
-            <p style={{color: "",width: "200px", textAlign: "end", fontSize: "20px"}}>{valor2 > 0 && `(${valor2}) ${valor2Percent.toFixed(0)}%`}</p>
+<<<<<<< HEAD
+
+            <span style={{left: 10, position:"absolute", marginTop:"10px", color: "rgba(255, 255, 255, 1)", fontSize: "18px"  }}>
+                {valor1Percent.toFixed(0)}% ({valor1} {valor1 === 1 ? 'voto' : 'votos'})
+            </span>
+
+            <span style={{right: 10, position:"absolute", marginTop:"10px", color: "rgba(255, 255, 255, 1)", fontSize: "18px"  }}>
+                ({valor2} {valor2 === 1 ? 'voto' : 'votos'}) {valor2Percent.toFixed(0)}%
+            </span>
+
+=======
+            <p style={{right: 10, position: "absolute", height: 40, color: "#ffffff",width: "200px", textAlign: "end", fontSize: "20px", marginTop: 35, }}>{valor2 > 0 && `(${valor2}) ${valor2Percent.toFixed(0)}%`}</p>
+>>>>>>> 053ee61558e86e7d5113bb062ead275e8eca0225
         </div>
     );
 }
